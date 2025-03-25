@@ -10,4 +10,6 @@ import { MatIconModule } from '@angular/material/icon';
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss',
 })
-export class NavbarComponent {}
+export class NavbarComponent {
+  menuItems = [{ icon: 'home', label: 'Home', route: '/home' }];
+}

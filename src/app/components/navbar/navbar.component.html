@@ -1,8 +1,10 @@
-<mat-toolbar class="navbar-container">
-  <span>
-    <button mat-button extended routerLink="/home">
-      <mat-icon>home</mat-icon>
-      Home
+<span class="navbar-container">
+  <div class="navbar-item">
+    @for (item of menuItems; track $index) {
+    <button mat-button extended routerLink="{{ item.route }}">
+      <mat-icon>{{ item.icon }}</mat-icon>
+      {{ item.label }}
     </button>
-  </span>
-</mat-toolbar>
+    }
+  </div>
+</span>
