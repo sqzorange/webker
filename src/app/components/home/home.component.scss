@@ -1,0 +1,31 @@
+.home-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.welcome-section {
+  background-color: #d7e3ff;
+  padding: 30px;
+  margin-bottom: 20px;
+}
+
+.popular-destinations,
+.special-offers {
+  margin-top: 20px;
+}
+
+.destinations {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.destination-card {
+  text-align: center;
+  width: 150px;
+}
+
+.destination-card img {
+  width: 100%;
+  border-radius: 8px;
+}
