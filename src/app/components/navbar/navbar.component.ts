@@ -13,6 +13,6 @@ import { MatIconModule } from '@angular/material/icon';
 export class NavbarComponent {
   menuItems = [
     { icon: 'home', label: 'Home', route: '/home' },
-    { icon: 'flight', label: 'Járatok', route: '/flights' },
+    { icon: 'flight', label: 'Foglalás', route: '/booking' },
   ];
 }
