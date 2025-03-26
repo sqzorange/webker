@@ -6,6 +6,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule, MatOptionModule } from '@angular/material/core';
 import { MatSelectModule } from '@angular/material/select';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'app-booking',
@@ -18,6 +19,7 @@ import { MatSelectModule } from '@angular/material/select';
     MatOptionModule,
     MatNativeDateModule,
     MatSelectModule,
+    MatButtonModule,
   ],
   templateUrl: './booking.component.html',
   styleUrl: './booking.component.scss',
