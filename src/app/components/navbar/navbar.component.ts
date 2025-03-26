@@ -11,8 +11,15 @@ import { MatIconModule } from '@angular/material/icon';
   styleUrl: './navbar.component.scss',
 })
 export class NavbarComponent {
+  isMenuOpen = false;
+  screenWidth: number = window.innerWidth;
+
   menuItems = [
     { icon: 'home', label: 'Home', route: '/home' },
     { icon: 'flight', label: 'Foglalás', route: '/booking' },
   ];
+
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen; // Menü nyitása vagy zárása
+  }
 }

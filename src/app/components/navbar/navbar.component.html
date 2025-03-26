@@ -1,10 +1,45 @@
-<span class="navbar-container">
-  <div class="navbar-item">
-    @for (item of menuItems; track $index) {
-    <button mat-button extended routerLink="{{ item.route }}">
-      <mat-icon>{{ item.icon }}</mat-icon>
-      {{ item.label }}
-    </button>
-    }
+<div class="navbar-center">
+  <div class="hamburger" (click)="toggleMenu()">
+    <mat-icon>menu</mat-icon>
   </div>
-</span>
+  @if (isMenuOpen || screenWidth > 768) {
+  <span class="navbar-container">
+    <div class="navbar-item">
+      @for (item of menuItems; track $index) {
+      <button
+        mat-button
+        extended
+        routerLink="{{ item.route }}"
+        routerLinkActive="active"
+      >
+        <mat-icon>{{ item.icon }}</mat-icon>
+        {{ item.label }}
+      </button>
+      }
+    </div> </span
+  >}
+</div>
+
+<!--
+<div class="navbar-center">
+  <div class="hamburger" (click)="toggleMenu()">
+    <mat-icon>menu</mat-icon>
+  </div>
+  @if (isMenuOpen || screenWidth > 768) {
+  <span class="navbar-container">
+    <div class="navbar-item">
+      @for (item of menuItems; track $index) {
+      <button
+        mat-button
+        extended
+        routerLink="{{ item.route }}"
+        routerLinkActive="active"
+      >
+        <mat-icon>{{ item.icon }}</mat-icon>
+        {{ item.label }}
+      </button>
+      }
+    </div> </span
+  >}
+</div>
+-->
