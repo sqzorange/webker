@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "departure": "Budapest",
+    "arrival": "Párizs",
+    "date": "2025-04-15",
+    "class": "economy"
+  },
+  {
+    "id": 2,
+    "departure": "Budapest",
+    "arrival": "New York",
+    "date": "2025-05-10",
+    "class": "business"
+  },
+  {
+    "id": 3,
+    "departure": "Budapest",
+    "arrival": "Tokyo",
+    "date": "2025-04-20",
+    "class": "economy"
+  }
+]
