@@ -1,81 +1,83 @@
-<app-navbar></app-navbar>
-<div class="flight-form-container">
-  <h2>Repülőjárat Foglalás</h2>
-  <form [formGroup]="flightForm" (ngSubmit)="onSubmit()">
-    <!-- Utas adatok -->
-    <fieldset formGroupName="passengerInfo">
-      <legend>Utas Információ</legend>
-      <mat-form-field appearance="fill">
-        <mat-label>Utónév</mat-label>
-        <input matInput formControlName="firstName" />
-      </mat-form-field>
+<div class="page-container">
+  <app-navbar></app-navbar>
+  <div class="flight-form-container">
+    <h2>Repülőjárat Foglalás</h2>
+    <form [formGroup]="flightForm" (ngSubmit)="onSubmit()">
+      <!-- Utas adatok -->
+      <fieldset formGroupName="passengerInfo">
+        <legend>Utas Információ</legend>
+        <mat-form-field appearance="fill">
+          <mat-label>Utónév</mat-label>
+          <input matInput formControlName="firstName" />
+        </mat-form-field>
 
-      <mat-form-field appearance="fill">
-        <mat-label>Vezetéknév</mat-label>
-        <input matInput formControlName="lastName" />
-      </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Vezetéknév</mat-label>
+          <input matInput formControlName="lastName" />
+        </mat-form-field>
 
-      <mat-form-field appearance="fill">
-        <mat-label>Email</mat-label>
-        <input matInput formControlName="email" type="email" />
-      </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Email</mat-label>
+          <input matInput formControlName="email" type="email" />
+        </mat-form-field>
 
-      <mat-form-field appearance="fill">
-        <mat-label>Telefonszám</mat-label>
-        <input matInput formControlName="phone" type="tel" />
-      </mat-form-field>
-    </fieldset>
+        <mat-form-field appearance="fill">
+          <mat-label>Telefonszám</mat-label>
+          <input matInput formControlName="phone" type="tel" />
+        </mat-form-field>
+      </fieldset>
 
-    <!-- Járat adatok -->
-    <fieldset formGroupName="flightDetails">
-      <legend>Járat Információ</legend>
-      <mat-form-field appearance="fill">
-        <mat-label>Indulási hely</mat-label>
-        <input matInput formControlName="departure" />
-      </mat-form-field>
+      <!-- Járat adatok -->
+      <fieldset formGroupName="flightDetails">
+        <legend>Járat Információ</legend>
+        <mat-form-field appearance="fill">
+          <mat-label>Indulási hely</mat-label>
+          <input matInput formControlName="departure" />
+        </mat-form-field>
 
-      <mat-form-field appearance="fill">
-        <mat-label>Érkezési hely</mat-label>
-        <input matInput formControlName="arrival" />
-      </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Érkezési hely</mat-label>
+          <input matInput formControlName="arrival" />
+        </mat-form-field>
 
-      <mat-form-field appearance="fill">
-        <mat-label>Indulási dátum</mat-label>
-        <input matInput [matDatepicker]="datePicker" formControlName="date" />
-        <mat-datepicker-toggle
-          matSuffix
-          [for]="datePicker"
-        ></mat-datepicker-toggle>
-        <mat-datepicker #datePicker></mat-datepicker>
-      </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Indulási dátum</mat-label>
+          <input matInput [matDatepicker]="datePicker" formControlName="date" />
+          <mat-datepicker-toggle
+            matSuffix
+            [for]="datePicker"
+          ></mat-datepicker-toggle>
+          <mat-datepicker #datePicker></mat-datepicker>
+        </mat-form-field>
 
-      <mat-form-field appearance="fill">
-        <mat-label>Utazási osztály</mat-label>
-        <mat-select formControlName="class">
-          <mat-option value="economy">Túrista</mat-option>
-          <mat-option value="business">Business</mat-option>
-          <mat-option value="first">Első osztályú</mat-option>
-        </mat-select>
-      </mat-form-field>
-    </fieldset>
+        <mat-form-field appearance="fill">
+          <mat-label>Utazási osztály</mat-label>
+          <mat-select formControlName="class">
+            <mat-option value="economy">Túrista</mat-option>
+            <mat-option value="business">Business</mat-option>
+            <mat-option value="first">Első osztályú</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </fieldset>
 
-    <!-- Poggyász adatok -->
-    <fieldset formGroupName="baggageInfo">
-      <legend>Poggyász Információ</legend>
-      <mat-form-field appearance="fill">
-        <mat-label>Feladott poggyászok száma</mat-label>
-        <input matInput type="number" formControlName="checkedBaggage" />
-      </mat-form-field>
+      <!-- Poggyász adatok -->
+      <fieldset formGroupName="baggageInfo">
+        <legend>Poggyász Információ</legend>
+        <mat-form-field appearance="fill">
+          <mat-label>Feladott poggyászok száma</mat-label>
+          <input matInput type="number" formControlName="checkedBaggage" />
+        </mat-form-field>
 
-      <mat-form-field appearance="fill">
-        <mat-label>Kézipoggyászok száma</mat-label>
-        <input matInput type="number" formControlName="cabinBaggage" />
-      </mat-form-field>
-    </fieldset>
+        <mat-form-field appearance="fill">
+          <mat-label>Kézipoggyászok száma</mat-label>
+          <input matInput type="number" formControlName="cabinBaggage" />
+        </mat-form-field>
+      </fieldset>
 
-    <!-- Beküldés gomb -->
-    <button mat-stroked-button type="button" (click)="onSubmit()">
-      Foglalás
-    </button>
-  </form>
+      <!-- Beküldés gomb -->
+      <button mat-stroked-button type="button" (click)="onSubmit()">
+        Foglalás
+      </button>
+    </form>
+  </div>
 </div>

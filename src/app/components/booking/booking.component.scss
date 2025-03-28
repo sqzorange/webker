@@ -1,8 +1,13 @@
+.page-container {
+  background: linear-gradient(to bottom, #00c6ff, #feec76);
+  min-height: 100vh;
+}
+
 .flight-form-container {
   max-width: 600px;
   margin: 20px auto;
   padding: 20px;
-  background-color: #f3f4f6;
+  background-color: rgb(243, 244, 246, 0.7);
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
