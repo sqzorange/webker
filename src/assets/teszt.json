@@ -19,5 +19,12 @@
     "arrival": "Tokyo",
     "date": "2025-04-20",
     "class": "economy"
+  },
+  {
+    "id": 3,
+    "departure": "Budapest",
+    "arrival": "Párizs",
+    "date": "2025-04-23",
+    "class": "first"
   }
 ]
