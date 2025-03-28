@@ -21,11 +21,6 @@
   .hamburger {
     display: none;
   }
-  .navbar-center {
-    display: flex;
-    justify-content: center;
-    margin-top: 1rem;
-  }
 
   .navbar-container {
     background: linear-gradient(45deg, #5a9bff, #d7e3ff);
@@ -33,7 +28,6 @@
     justify-content: center;
     height: 3rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
   }
 
   .navbar-item {
@@ -42,7 +36,6 @@
     margin: 0 1rem;
     font-size: 30px;
   }
-
   .active {
     background-color: white;
     font-weight: bold;
