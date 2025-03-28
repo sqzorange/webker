@@ -1,3 +1,20 @@
 <app-navbar></app-navbar>
 
-<p>flights works!</p>
+<p>departure → arrival (date) - class</p>
+
+@for (flight of flights | filter : 'class' : 'economy'; track $index; ) {
+<p>
+  {{ flight.departure }} → {{ flight.arrival }} ({{ flight.date }}) -
+  {{ flight.class }}
+</p>
+} @for (flight of flights | filter : 'class' : 'first'; track $index; ) {
+<p>
+  {{ flight.departure }} → {{ flight.arrival }} ({{ flight.date }}) -
+  {{ flight.class }}
+</p>
+} @for (flight of flights | filter : 'class' : 'business'; track $index; ) {
+<p>
+  {{ flight.departure }} → {{ flight.arrival }} ({{ flight.date }}) -
+  {{ flight.class }}
+</p>
+}
