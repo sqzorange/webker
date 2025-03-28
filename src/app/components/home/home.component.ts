@@ -9,4 +9,8 @@ import { RouterModule } from '@angular/router';
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
-export class HomeComponent {}
+export class HomeComponent {
+  imageParis: string =
+    'https://papirszarnyak.hu/wp-content/uploads/2024/01/Parizs-12.png';
+  imageNewYork: string = 'https://www.travelguide.net/media/new-york.jpeg';
+}

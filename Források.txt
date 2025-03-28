@@ -1,0 +1,5 @@
+Képek
+
+parizs.png: https://papirszarnyak.hu/wp-content/uploads/2024/01/Parizs-12.png
+
+newyork.jpg: https://www.travelguide.net/media/new-york.jpeg
