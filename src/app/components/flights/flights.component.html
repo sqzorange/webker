@@ -1,8 +1,27 @@
-<app-navbar></app-navbar>
-<app-search (search)="updateSearch($event)"></app-search>
+<div class="page-container">
+  <app-navbar></app-navbar>
+  <section class="results-container">
+    <app-search (search)="updateSearch($event)"></app-search>
 
-<h2>Keresés eredménye:</h2>
-<h3>Indulás → Érkezés (Dátum)</h3>
-@for (flight of filteredFlights; track $index) {
-<p>{{ flight.departure }} → {{ flight.arrival }} ({{ flight.date }})</p>
-}
+    <h2>Keresés eredménye:</h2>
+
+    <table class="flights-table">
+      <thead>
+        <tr>
+          <th>Indulás</th>
+          <th>Érkezés</th>
+          <th>Dátum</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (flight of filteredFlights; track $index) {
+        <tr>
+          <td>{{ flight.departure }}</td>
+          <td>{{ flight.arrival }}</td>
+          <td>{{ flight.date }}</td>
+        </tr>
+        }
+      </tbody>
+    </table>
+  </section>
+</div>
