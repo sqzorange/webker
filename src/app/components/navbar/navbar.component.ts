@@ -17,6 +17,7 @@ export class NavbarComponent {
   menuItems = [
     { icon: 'home', label: 'Home', route: '/home' },
     { icon: 'flight', label: 'Foglalás', route: '/booking' },
+    { icon: 'flight', label: 'Keresés', route: '/flights' },
   ];
 
   toggleMenu() {
