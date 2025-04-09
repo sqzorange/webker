@@ -1,0 +1,8 @@
+<form [formGroup]="searchForm" (ngSubmit)="onSearch()">
+  <input matInput placeholder="Indulás" formControlName="departure" />
+  <input matInput placeholder="Érkezés" formControlName="arrival" />
+  <input matInput placeholder="Osztály" formControlName="class" />
+  <input matInput type="date" placeholder="Dátum" formControlName="date" />
+  <button matButtonFlat type="submit">Keresés</button>
+  <button type="button" (click)="onReset()">Reset</button>
+</form>

@@ -1,0 +1,352 @@
+[
+  {
+    "id": 1,
+    "departure": "Budapest",
+    "arrival": "Párizs",
+    "date": "2025-04-15",
+    "class": "economy"
+  },
+  {
+    "id": 2,
+    "departure": "Budapest",
+    "arrival": "New York",
+    "date": "2025-05-10",
+    "class": "business"
+  },
+  {
+    "id": 3,
+    "departure": "Budapest",
+    "arrival": "Tokió",
+    "date": "2025-04-20",
+    "class": "economy"
+  },
+  {
+    "id": 4,
+    "departure": "Budapest",
+    "arrival": "London",
+    "date": "2025-06-01",
+    "class": "economy"
+  },
+  {
+    "id": 5,
+    "departure": "Budapest",
+    "arrival": "Berlin",
+    "date": "2025-06-05",
+    "class": "economy"
+  },
+  {
+    "id": 6,
+    "departure": "Budapest",
+    "arrival": "Los Angeles",
+    "date": "2025-07-10",
+    "class": "business"
+  },
+  {
+    "id": 7,
+    "departure": "Budapest",
+    "arrival": "Dubai",
+    "date": "2025-08-15",
+    "class": "economy"
+  },
+  {
+    "id": 8,
+    "departure": "Budapest",
+    "arrival": "Róma",
+    "date": "2025-04-25",
+    "class": "economy"
+  },
+  {
+    "id": 9,
+    "departure": "Budapest",
+    "arrival": "Sydney",
+    "date": "2025-09-10",
+    "class": "first"
+  },
+  {
+    "id": 10,
+    "departure": "Budapest",
+    "arrival": "Kairó",
+    "date": "2025-06-20",
+    "class": "economy"
+  },
+  {
+    "id": 11,
+    "departure": "Budapest",
+    "arrival": "Bangkok",
+    "date": "2025-07-15",
+    "class": "economy"
+  },
+  {
+    "id": 12,
+    "departure": "Budapest",
+    "arrival": "Barcelona",
+    "date": "2025-05-01",
+    "class": "business"
+  },
+  {
+    "id": 13,
+    "departure": "Budapest",
+    "arrival": "Moskva",
+    "date": "2025-08-10",
+    "class": "economy"
+  },
+  {
+    "id": 14,
+    "departure": "Budapest",
+    "arrival": "Madrid",
+    "date": "2025-04-30",
+    "class": "economy"
+  },
+  {
+    "id": 15,
+    "departure": "Budapest",
+    "arrival": "Szingapúr",
+    "date": "2025-09-01",
+    "class": "business"
+  },
+  {
+    "id": 16,
+    "departure": "Budapest",
+    "arrival": "Sanghaj",
+    "date": "2025-05-15",
+    "class": "first"
+  },
+  {
+    "id": 17,
+    "departure": "Budapest",
+    "arrival": "Bécs",
+    "date": "2025-06-10",
+    "class": "economy"
+  },
+  {
+    "id": 18,
+    "departure": "Budapest",
+    "arrival": "Szöul",
+    "date": "2025-07-20",
+    "class": "economy"
+  },
+  {
+    "id": 19,
+    "departure": "Budapest",
+    "arrival": "Prága",
+    "date": "2025-06-25",
+    "class": "economy"
+  },
+  {
+    "id": 20,
+    "departure": "Budapest",
+    "arrival": "Koppenhága",
+    "date": "2025-07-05",
+    "class": "business"
+  },
+  {
+    "id": 21,
+    "departure": "Budapest",
+    "arrival": "Varsó",
+    "date": "2025-05-18",
+    "class": "economy"
+  },
+  {
+    "id": 22,
+    "departure": "Budapest",
+    "arrival": "Stockholm",
+    "date": "2025-04-28",
+    "class": "economy"
+  },
+  {
+    "id": 23,
+    "departure": "Budapest",
+    "arrival": "Oslo",
+    "date": "2025-05-22",
+    "class": "economy"
+  },
+  {
+    "id": 24,
+    "departure": "Budapest",
+    "arrival": "Amszterdam",
+    "date": "2025-06-05",
+    "class": "economy"
+  },
+  {
+    "id": 25,
+    "departure": "Budapest",
+    "arrival": "Athín",
+    "date": "2025-04-10",
+    "class": "economy"
+  },
+  {
+    "id": 26,
+    "departure": "Budapest",
+    "arrival": "Isztambul",
+    "date": "2025-07-30",
+    "class": "business"
+  },
+  {
+    "id": 27,
+    "departure": "Budapest",
+    "arrival": "Zágráb",
+    "date": "2025-05-02",
+    "class": "economy"
+  },
+  {
+    "id": 28,
+    "departure": "Budapest",
+    "arrival": "Dubrovnik",
+    "date": "2025-05-25",
+    "class": "economy"
+  },
+  {
+    "id": 29,
+    "departure": "Budapest",
+    "arrival": "Belgrád",
+    "date": "2025-06-15",
+    "class": "economy"
+  },
+  {
+    "id": 30,
+    "departure": "Budapest",
+    "arrival": "Dubaj",
+    "date": "2025-07-01",
+    "class": "business"
+  },
+  {
+    "id": 31,
+    "departure": "Budapest",
+    "arrival": "Helsinki",
+    "date": "2025-08-10",
+    "class": "economy"
+  },
+  {
+    "id": 32,
+    "departure": "Budapest",
+    "arrival": "Lisszabon",
+    "date": "2025-09-05",
+    "class": "economy"
+  },
+  {
+    "id": 33,
+    "departure": "Budapest",
+    "arrival": "Amszterdam",
+    "date": "2025-06-12",
+    "class": "economy"
+  },
+  {
+    "id": 34,
+    "departure": "Budapest",
+    "arrival": "Köln",
+    "date": "2025-04-15",
+    "class": "economy"
+  },
+  {
+    "id": 35,
+    "departure": "Budapest",
+    "arrival": "Bécs",
+    "date": "2025-07-25",
+    "class": "economy"
+  },
+  {
+    "id": 36,
+    "departure": "Budapest",
+    "arrival": "Catania",
+    "date": "2025-06-30",
+    "class": "economy"
+  },
+  {
+    "id": 37,
+    "departure": "Budapest",
+    "arrival": "Valetta",
+    "date": "2025-09-02",
+    "class": "economy"
+  },
+  {
+    "id": 38,
+    "departure": "Budapest",
+    "arrival": "Ljubljana",
+    "date": "2025-06-20",
+    "class": "economy"
+  },
+  {
+    "id": 39,
+    "departure": "Budapest",
+    "arrival": "Porto",
+    "date": "2025-04-25",
+    "class": "economy"
+  },
+  {
+    "id": 40,
+    "departure": "Budapest",
+    "arrival": "Bukarest",
+    "date": "2025-07-12",
+    "class": "economy"
+  },
+  {
+    "id": 41,
+    "departure": "Budapest",
+    "arrival": "Dublin",
+    "date": "2025-05-05",
+    "class": "economy"
+  },
+  {
+    "id": 42,
+    "departure": "Budapest",
+    "arrival": "Szentpétervár",
+    "date": "2025-08-01",
+    "class": "economy"
+  },
+  {
+    "id": 43,
+    "departure": "Budapest",
+    "arrival": "São Paulo",
+    "date": "2025-05-20",
+    "class": "business"
+  },
+  {
+    "id": 44,
+    "departure": "Budapest",
+    "arrival": "Kairó",
+    "date": "2025-06-30",
+    "class": "economy"
+  },
+  {
+    "id": 45,
+    "departure": "Budapest",
+    "arrival": "Málta",
+    "date": "2025-04-27",
+    "class": "economy"
+  },
+  {
+    "id": 46,
+    "departure": "Budapest",
+    "arrival": "Dublin",
+    "date": "2025-05-22",
+    "class": "economy"
+  },
+  {
+    "id": 47,
+    "departure": "Budapest",
+    "arrival": "Kuala Lumpur",
+    "date": "2025-09-15",
+    "class": "first"
+  },
+  {
+    "id": 48,
+    "departure": "Budapest",
+    "arrival": "München",
+    "date": "2025-07-01",
+    "class": "economy"
+  },
+  {
+    "id": 49,
+    "departure": "Budapest",
+    "arrival": "Frankfurt",
+    "date": "2025-05-12",
+    "class": "business"
+  },
+  {
+    "id": 50,
+    "departure": "Budapest",
+    "arrival": "London",
+    "date": "2025-06-14",
+    "class": "economy"
+  }
+]
