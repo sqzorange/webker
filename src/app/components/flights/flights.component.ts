@@ -1,13 +1,12 @@
 import { Component } from '@angular/core';
 import { NavbarComponent } from '../navbar/navbar.component';
 import { CommonModule } from '@angular/common';
-import { FilterPipe } from '../../pipes/filter.pipe';
 import flightsData from '../../../assets/repulok.json';
 import { SearchComponent } from '../search/search.component';
 
 @Component({
   selector: 'app-flights',
-  imports: [NavbarComponent, CommonModule, FilterPipe, SearchComponent],
+  imports: [NavbarComponent, CommonModule, SearchComponent],
   templateUrl: './flights.component.html',
   styleUrl: './flights.component.scss',
 })

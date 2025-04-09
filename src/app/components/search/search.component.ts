@@ -1,12 +1,22 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
-import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatSelectModule } from '@angular/material/select';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'app-search',
   standalone: true,
-  imports: [ReactiveFormsModule, MatInputModule, MatButtonModule],
+  imports: [
+    ReactiveFormsModule,
+    MatInputModule,
+    MatButtonModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatSelectModule,
+  ],
   templateUrl: './search.component.html',
   styleUrl: './search.component.scss',
 })
@@ -17,9 +27,8 @@ export class SearchComponent {
 
   constructor(private fb: FormBuilder) {
     this.searchForm = this.fb.group({
-      departure: [''],
       arrival: [''],
-      class: [''],
+      class: ['economy'],
       date: [''],
     });
   }

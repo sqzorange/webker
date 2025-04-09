@@ -2,10 +2,7 @@
 <app-search (search)="updateSearch($event)"></app-search>
 
 <h2>Keresés eredménye:</h2>
-<h3>Indulás → Érkezés - Osztály</h3>
+<h3>Indulás → Érkezés (Dátum)</h3>
 @for (flight of filteredFlights; track $index) {
-<p>
-  {{ flight.departure }} → {{ flight.arrival }} ({{ flight.date }}) -
-  {{ flight.class }}
-</p>
+<p>{{ flight.departure }} → {{ flight.arrival }} ({{ flight.date }})</p>
 }

@@ -1,8 +1,22 @@
 <form [formGroup]="searchForm" (ngSubmit)="onSearch()">
-  <input matInput placeholder="Indulás" formControlName="departure" />
-  <input matInput placeholder="Érkezés" formControlName="arrival" />
-  <input matInput placeholder="Osztály" formControlName="class" />
-  <input matInput type="date" placeholder="Dátum" formControlName="date" />
-  <button matButtonFlat type="submit">Keresés</button>
-  <button type="button" (click)="onReset()">Reset</button>
+  <mat-form-field appearance="fill">
+    <mat-label>Úticél</mat-label>
+    <input matInput formControlName="arrival" />
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Utazási osztály</mat-label>
+    <mat-select formControlName="class">
+      <mat-option value="economy">Túrista</mat-option>
+      <mat-option value="business">Business</mat-option>
+      <mat-option value="first">Első osztályú</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Érkezési dátum</mat-label>
+    <input matInput [matDatepicker]="datePicker" formControlName="date" />
+    <mat-datepicker-toggle matSuffix [for]="datePicker"></mat-datepicker-toggle>
+    <mat-datepicker #datePicker></mat-datepicker>
+  </mat-form-field>
+  <button mat-flat-button type="submit">Keresés</button>
+  <button mat-flat-button type="button" (click)="onReset()">Reset</button>
 </form>
