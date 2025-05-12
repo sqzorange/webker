@@ -18,6 +18,7 @@ export class NavbarComponent {
     { icon: 'home', label: 'Home', route: '/home' },
     { icon: 'flight', label: 'Foglalás', route: '/booking' },
     { icon: 'flight', label: 'Keresés', route: '/flights' },
+    { icon: 'login', label: 'Bejelentkezés  ', route: '/login' },
   ];
 
   toggleMenu() {
