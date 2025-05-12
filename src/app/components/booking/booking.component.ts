@@ -1,4 +1,9 @@
-import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import {
+  FormControl,
+  FormGroup,
+  ReactiveFormsModule,
+  Validators,
+} from '@angular/forms';
 import { Component } from '@angular/core';
 import { NavbarComponent } from '../navbar/navbar.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -27,10 +32,14 @@ import { MatButtonModule } from '@angular/material/button';
 export class BookingComponent {
   flightForm = new FormGroup({
     passengerInfo: new FormGroup({
-      firstName: new FormControl(''),
-      lastName: new FormControl(''),
-      email: new FormControl(''),
-      phone: new FormControl('+36'),
+      firstName: new FormControl('', Validators.required),
+      lastName: new FormControl('', Validators.required),
+      email: new FormControl('', {
+        validators: [Validators.required, Validators.email],
+      }),
+      phone: new FormControl('+36', {
+        validators: [Validators.required, Validators.pattern('^\\+36\\d{9}$')],
+      }),
     }),
     flightDetails: new FormGroup({
       departure: new FormControl(''),
@@ -45,6 +54,9 @@ export class BookingComponent {
   });
 
   onSubmit(): void {
-    console.log(this.flightForm.value);
+    if (this.flightForm.invalid) {
+      console.warn('Form is invalid');
+      return;
+    }
   }
 }
