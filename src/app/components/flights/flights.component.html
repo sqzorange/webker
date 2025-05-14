@@ -4,24 +4,25 @@
     <app-search (search)="updateSearch($event)"></app-search>
 
     <h2>Keresés eredménye:</h2>
-
-    <table class="flights-table">
-      <thead>
-        <tr>
-          <th>Indulás</th>
-          <th>Érkezés</th>
-          <th>Dátum</th>
-        </tr>
-      </thead>
-      <tbody>
-        @for (flight of filteredFlights; track $index) {
-        <tr>
-          <td>{{ flight.departure }}</td>
-          <td>{{ flight.arrival }}</td>
-          <td>{{ flight.date }}</td>
-        </tr>
-        }
-      </tbody>
-    </table>
+    <div class="table-responsive">
+      <table class="flights-table">
+        <thead>
+          <tr>
+            <th>Indulás</th>
+            <th>Érkezés</th>
+            <th>Dátum</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (flight of filteredFlights; track $index) {
+          <tr>
+            <td>{{ flight.departure }}</td>
+            <td>{{ flight.arrival }}</td>
+            <td>{{ flight.date }}</td>
+          </tr>
+          }
+        </tbody>
+      </table>
+    </div>
   </section>
 </div>
