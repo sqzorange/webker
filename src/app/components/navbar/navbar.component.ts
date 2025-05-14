@@ -22,34 +22,36 @@ export class NavbarComponent {
       icon: 'home',
       label: 'Home',
       route: '/home',
-      requiresAuth: true,
+      displayFor: 'both',
     },
     {
       icon: 'flight',
       label: 'Foglalás',
       route: '/booking',
-      requiresAuth: true,
+      displayFor: 'loggedIn',
     },
     {
       icon: 'flight',
       label: 'Keresés',
       route: '/flights',
-      requiresAuth: true,
+      displayFor: 'both',
     },
     {
       icon: 'login',
       label: 'Bejelentkezés  ',
       route: '/login',
+      displayFor: 'loggedOut',
     },
     {
       icon: 'login',
       label: 'Regisztráció  ',
       route: '/register',
+      displayFor: 'loggedOut',
     },
     {
       icon: 'exit_to_app',
       label: 'Kijelentkezés  ',
-      requiresAuth: true,
+      displayFor: 'loggedIn',
       action: () => {
         this.authService.logout().then(() => {
           window.location.reload();

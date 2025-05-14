@@ -5,8 +5,9 @@
   @if (isMenuOpen || screenWidth > 768) {
   <span class="navbar-container">
     <div class="navbar-item">
-      @for (item of menuItems; track $index) { @if (item.requiresAuth ||
-      !isLoggedIn()) {
+      @for (item of menuItems; track $index) { @if (item.displayFor === 'both'
+      || (item.displayFor === 'loggedIn' && isLoggedIn()) || (item.displayFor
+      === 'loggedOut' && !isLoggedIn())) {
       <button
         mat-button
         extended
