@@ -1,20 +1,37 @@
 <div class="page-container">
   <app-navbar></app-navbar>
-  <div class="login-form-container">
-    <h2>Bejelentkezés</h2>
-
-    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-      <mat-form-field appearance="fill">
-        <mat-label>Email-cím</mat-label>
-        <input matInput type="email" formControlName="email" />
-      </mat-form-field>
-      <mat-form-field appearance="fill">
-        <mat-label>Jelszó</mat-label>
-        <input matInput type="password" formControlName="password" />
-      </mat-form-field>
-      <button mat-stroked-button type="button" (click)="onSubmit()">
-        Bejelentkezés
-      </button>
-    </form>
+  <div class="login-form-wrapper">
+    <!-- A mat-card ad egy elegáns kártya-stílusú dobozt -->
+    <mat-card class="login-form-card">
+      <h2>Bejelentkezés</h2>
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <mat-form-field appearance="fill" class="full-width">
+          <mat-label>Email-cím</mat-label>
+          <input matInput type="email" formControlName="email" />
+          <!-- Validációs üzenetek -->
+          <mat-error *ngIf="loginForm.get('email')?.hasError('required')">
+            Kérlek, add meg az email címed!
+          </mat-error>
+          <mat-error *ngIf="loginForm.get('email')?.hasError('email')">
+            Érvénytelen email formátum.
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="fill" class="full-width">
+          <mat-label>Jelszó</mat-label>
+          <input matInput type="password" formControlName="password" />
+          <!-- Validációs üzenetek -->
+          <mat-error *ngIf="loginForm.get('password')?.hasError('required')">
+            Kérlek, add meg a jelszavad!
+          </mat-error>
+          <mat-error *ngIf="loginForm.get('password')?.hasError('minlength')">
+            Minimum 6 karakter hosszúnak kell lennie.
+          </mat-error>
+        </mat-form-field>
+        <!-- A gomb típusa legyen submit, így az [ngSubmit] is megfelelően működik -->
+        <button mat-stroked-button color="primary" type="submit">
+          Bejelentkezés
+        </button>
+      </form>
+    </mat-card>
   </div>
 </div>
