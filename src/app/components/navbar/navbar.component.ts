@@ -1,7 +1,7 @@
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { Component } from '@angular/core';
-import { RouterModule, CanActivate } from '@angular/router';
+import { RouterModule } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
 import { AuthService } from '../../services/auth.service';
 
@@ -22,16 +22,19 @@ export class NavbarComponent {
       icon: 'home',
       label: 'Home',
       route: '/home',
+      requiresAuth: true,
     },
     {
       icon: 'flight',
       label: 'Foglalás',
       route: '/booking',
+      requiresAuth: true,
     },
     {
       icon: 'flight',
       label: 'Keresés',
       route: '/flights',
+      requiresAuth: true,
     },
     {
       icon: 'login',
@@ -44,8 +47,9 @@ export class NavbarComponent {
       route: '/register',
     },
     {
-      icon: 'login',
+      icon: 'exit_to_app',
       label: 'Kijelentkezés  ',
+      requiresAuth: true,
       action: () => {
         this.authService.logout().then(() => {
           window.location.reload();

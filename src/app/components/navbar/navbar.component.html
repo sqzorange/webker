@@ -5,17 +5,19 @@
   @if (isMenuOpen || screenWidth > 768) {
   <span class="navbar-container">
     <div class="navbar-item">
-      @for (item of menuItems; track $index) {
+      @for (item of menuItems; track $index) { @if (item.requiresAuth ||
+      !isLoggedIn()) {
       <button
         mat-button
         extended
-        routerLink="{{ item.route }}"
+        [routerLink]="item.route ? item.route : null"
+        (click)="item.action ? item.action() : null"
         routerLinkActive="active"
       >
         <mat-icon>{{ item.icon }}</mat-icon>
         {{ item.label }}
       </button>
-      }
+      } }
     </div> </span
   >}
 </div>
