@@ -1,3 +1,21 @@
+@media screen and (max-width: 768px) {
+  .page-container {
+    padding: 1rem;
+  }
+
+  .register-form-wrapper {
+    max-width: 90%;
+  }
+
+  .register-form-card {
+    padding: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+
 .page-container {
   min-height: 100vh;
   background: linear-gradient(135deg, #74ebd5, #acb6e5);

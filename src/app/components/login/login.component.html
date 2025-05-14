@@ -9,25 +9,20 @@
           <mat-label>Email-cím</mat-label>
           <input matInput type="email" formControlName="email" />
           <!-- Validációs üzenetek -->
-          <mat-error *ngIf="loginForm.get('email')?.hasError('required')">
-            Kérlek, add meg az email címed!
-          </mat-error>
-          <mat-error *ngIf="loginForm.get('email')?.hasError('email')">
-            Érvénytelen email formátum.
-          </mat-error>
+          @if (loginForm.get('email')?.hasError('required')) {
+          <mat-error> Kérlek, add meg az email címed! </mat-error>} @if
+          (loginForm.get('email')?.hasError('email')){
+          <mat-error> Érvénytelen email formátum. </mat-error>}
         </mat-form-field>
         <mat-form-field appearance="fill" class="full-width">
           <mat-label>Jelszó</mat-label>
           <input matInput type="password" formControlName="password" />
           <!-- Validációs üzenetek -->
-          <mat-error *ngIf="loginForm.get('password')?.hasError('required')">
-            Kérlek, add meg a jelszavad!
-          </mat-error>
-          <mat-error *ngIf="loginForm.get('password')?.hasError('minlength')">
-            Minimum 6 karakter hosszúnak kell lennie.
-          </mat-error>
+          @if(loginForm.get('password')?.hasError('required')){
+          <mat-error> Kérlek, add meg a jelszavad! </mat-error>}
+          @if(loginForm.get('password')?.hasError('minlength')) {
+          <mat-error> Minimum 6 karakter hosszúnak kell lennie. </mat-error>}
         </mat-form-field>
-        <!-- A gomb típusa legyen submit, így az [ngSubmit] is megfelelően működik -->
         <button mat-stroked-button color="primary" type="submit">
           Bejelentkezés
         </button>
