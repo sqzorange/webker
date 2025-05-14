@@ -4,8 +4,19 @@
     justify-content: flex-start;
   }
   .navbar-container {
-    justify-content: flex-start;
-    height: auto;
+    position: absolute;
+    top: 50px;
+    left: 10px;
+    width: calc(100% - 20px);
+    max-width: 280px;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    z-index: 1000;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
   }
   .active {
     background-color: white;

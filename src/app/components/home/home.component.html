@@ -1,29 +1,31 @@
-<app-navbar></app-navbar>
-<div class="home-container">
-  <div class="welcome-section">
-    <h1>Fedezd fel a világot!</h1>
-    <p>Keress és foglalj repülőjegyet egyszerűen.</p>
-    <button mat-raised-button color="primary" routerLink="/flights">
-      Kezdjük a keresést!
-    </button>
-  </div>
+<div class="nav">
+  <app-navbar></app-navbar>
+  <div class="home-container">
+    <div class="welcome-section">
+      <h1>Fedezd fel a világot!</h1>
+      <p>Keress és foglalj repülőjegyet egyszerűen.</p>
+      <button mat-raised-button color="primary" routerLink="/flights">
+        Kezdjük a keresést!
+      </button>
+    </div>
 
-  <div class="popular-destinations">
-    <h2>Legnépszerűbb úti célok</h2>
-    <div class="destinations">
-      <div class="destination-card">
-        <img [src]="imageParis" alt="Párizs látképe" />
-        <p>Párizs</p>
-      </div>
-      <div class="destination-card">
-        <img [src]="imageNewYork" alt="New York látképe" />
-        <p>New York</p>
+    <div class="popular-destinations">
+      <h2>Legnépszerűbb úti célok</h2>
+      <div class="destinations">
+        <div class="destination-card">
+          <img [src]="imageParis" alt="Párizs látképe" />
+          <p>Párizs</p>
+        </div>
+        <div class="destination-card">
+          <img [src]="imageNewYork" alt="New York látképe" />
+          <p>New York</p>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="special-offers">
-    <h2>Kiemelt Ajánlatok</h2>
-    <p>20% kedvezmény minden tavaszi járatra!</p>
+    <div class="special-offers">
+      <h2>Kiemelt Ajánlatok</h2>
+      <p>20% kedvezmény minden tavaszi járatra!</p>
+    </div>
   </div>
 </div>
