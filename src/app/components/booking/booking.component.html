@@ -32,12 +32,24 @@
         <legend>Járat Információ</legend>
         <mat-form-field appearance="fill">
           <mat-label>Indulási hely</mat-label>
-          <input matInput formControlName="departure" />
+          <mat-select formControlName="departure">
+            @for(flight of flights$ | async; track $index) {
+            <mat-option [value]="flight.departure">
+              {{ flight.departure }}
+            </mat-option>
+            }
+          </mat-select>
         </mat-form-field>
 
         <mat-form-field appearance="fill">
           <mat-label>Érkezési hely</mat-label>
-          <input matInput formControlName="arrival" />
+          <mat-select formControlName="arrival">
+            @for(flight of flights$ | async; track $index) {
+            <mat-option [value]="flight.arrival">
+              {{ flight.arrival }}
+            </mat-option>
+            }
+          </mat-select>
         </mat-form-field>
 
         <mat-form-field appearance="fill">
