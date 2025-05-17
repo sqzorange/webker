@@ -12,15 +12,6 @@
         <mat-option value="first">Első osztályú</mat-option>
       </mat-select>
     </mat-form-field>
-    <mat-form-field appearance="fill" class="form-field">
-      <mat-label>Érkezési dátum</mat-label>
-      <input matInput [matDatepicker]="datePicker" formControlName="date" />
-      <mat-datepicker-toggle
-        matSuffix
-        [for]="datePicker"
-      ></mat-datepicker-toggle>
-      <mat-datepicker #datePicker></mat-datepicker>
-    </mat-form-field>
     <div class="button-group">
       <button mat-flat-button type="submit" class="search-btn">Keresés</button>
       <button

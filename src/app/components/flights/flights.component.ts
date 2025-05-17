@@ -1,42 +1,59 @@
-import { Component } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { NavbarComponent } from '../navbar/navbar.component';
 import { CommonModule } from '@angular/common';
-import flightsData from '../../../assets/repulok.json';
 import { SearchComponent } from '../search/search.component';
+import {
+  Firestore,
+  collectionData,
+  collection,
+  query,
+  where,
+} from '@angular/fire/firestore';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-flights',
+  standalone: true,
   imports: [NavbarComponent, CommonModule, SearchComponent],
   templateUrl: './flights.component.html',
-  styleUrl: './flights.component.scss',
+  styleUrls: ['./flights.component.scss'], // Győződj meg róla, hogy ez "styleUrls" tömb
 })
-export class FlightsComponent {
-  flights: any[] = flightsData;
+export class FlightsComponent implements OnInit {
+  firestore: Firestore = inject(Firestore);
+  filteredFlights$: Observable<any[]> | null = null;
   flightClasses: string[] = ['economy', 'first', 'business'];
-  searchCriteria: any = {};
 
-  updateSearch(values: any) {
-    this.searchCriteria = values;
+  ngOnInit() {
+    // Alapértelmezetten, ha nincs keresési feltétel, az összes járatot lekérjük
+    const flightsRef = collection(this.firestore, 'flights');
+    this.filteredFlights$ = collectionData(flightsRef, { idField: 'id' });
   }
 
-  get filteredFlights() {
-    return this.flights.filter((flight) => {
-      const {
-        departure,
-        arrival,
-        class: flightClass,
-        date,
-      } = this.searchCriteria;
+  updateSearch(values: any) {
+    const flightsRef = collection(this.firestore, 'flights');
+    const constraints = [];
 
-      return (
-        (!departure ||
-          flight.departure.toLowerCase().includes(departure.toLowerCase())) &&
-        (!arrival ||
-          flight.arrival.toLowerCase().includes(arrival.toLowerCase())) &&
-        (!flightClass ||
-          flight.class.toLowerCase().includes(flightClass.toLowerCase())) &&
-        (!date || flight.date === date)
-      );
-    });
+    // Felépítjük a Firestore lekérdezést csak a megadott feltételek alapján
+    if (values.departure) {
+      constraints.push(where('departure', '==', values.departure));
+    }
+    if (values.arrival) {
+      constraints.push(where('arrival', '==', values.arrival));
+    }
+    if (values.class) {
+      constraints.push(where('class', '==', values.class));
+    }
+    if (values.date) {
+      constraints.push(where('date', '==', values.date));
+    }
+
+    let flightsQuery;
+    if (constraints.length > 0) {
+      flightsQuery = query(flightsRef, ...constraints);
+    } else {
+      flightsQuery = flightsRef; // Ha nincs feltétel, az összes járatot kérjük le
+    }
+
+    this.filteredFlights$ = collectionData(flightsQuery, { idField: 'id' });
   }
 }

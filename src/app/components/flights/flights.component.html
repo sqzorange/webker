@@ -14,7 +14,7 @@
           </tr>
         </thead>
         <tbody>
-          @for (flight of filteredFlights; track $index) {
+          @for (flight of filteredFlights$ | async; track $index) {
           <tr>
             <td>{{ flight.departure }}</td>
             <td>{{ flight.arrival }}</td>
