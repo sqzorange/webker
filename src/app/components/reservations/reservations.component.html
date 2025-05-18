@@ -1,0 +1,39 @@
+<div class="page-container">
+  <app-navbar></app-navbar>
+
+  <div class="reservations-container">
+    <h2>Foglalásaim</h2>
+
+    <div class="reservation-list">
+      <div
+        class="reservation-card"
+        *ngFor="let reservation of reservations$ | async"
+      >
+        <div class="reservation-header">
+          <h3>
+            {{ reservation.passengerInfo.firstName }}
+            {{ reservation.passengerInfo.lastName }}
+          </h3>
+          <button
+            (click)="deleteReservation(reservation.id)"
+            class="delete-btn"
+          >
+            Törlés
+          </button>
+        </div>
+        <p>
+          <strong>Indulás:</strong> {{ reservation.flightDetails.departure }}
+        </p>
+        <p><strong>Érkezés:</strong> {{ reservation.flightDetails.arrival }}</p>
+        <p>
+          <strong>Dátum:</strong>
+          {{ convertTimestampToDate(reservation.flightDetails.date) }}
+        </p>
+        <p>
+          <strong>Osztály:</strong>
+          {{ reservation.flightDetails.class | flightClass }}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

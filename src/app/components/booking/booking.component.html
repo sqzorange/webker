@@ -33,11 +33,7 @@
         <mat-form-field appearance="fill">
           <mat-label>Indulási hely</mat-label>
           <mat-select formControlName="departure">
-            @for(flight of flights$ | async; track $index) {
-            <mat-option [value]="flight.departure">
-              {{ flight.departure }}
-            </mat-option>
-            }
+            <mat-option value="Budapest">Budapest</mat-option>
           </mat-select>
         </mat-form-field>
 

@@ -1,14 +1,12 @@
 <div class="page-container">
   <app-navbar></app-navbar>
   <div class="login-form-wrapper">
-    <!-- A mat-card ad egy elegáns kártya-stílusú dobozt -->
     <mat-card class="login-form-card">
       <h2>Bejelentkezés</h2>
       <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
         <mat-form-field appearance="fill" class="full-width">
           <mat-label>Email-cím</mat-label>
           <input matInput type="email" formControlName="email" />
-          <!-- Validációs üzenetek -->
           @if (loginForm.get('email')?.hasError('required')) {
           <mat-error> Kérlek, add meg az email címed! </mat-error>} @if
           (loginForm.get('email')?.hasError('email')){
@@ -17,7 +15,6 @@
         <mat-form-field appearance="fill" class="full-width">
           <mat-label>Jelszó</mat-label>
           <input matInput type="password" formControlName="password" />
-          <!-- Validációs üzenetek -->
           @if(loginForm.get('password')?.hasError('required')){
           <mat-error> Kérlek, add meg a jelszavad! </mat-error>}
           @if(loginForm.get('password')?.hasError('minlength')) {

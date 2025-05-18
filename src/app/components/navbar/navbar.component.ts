@@ -49,6 +49,12 @@ export class NavbarComponent {
       displayFor: 'loggedOut',
     },
     {
+      icon: 'account_circle',
+      label: 'Foglalásaim  ',
+      route: '/reservations',
+      displayFor: 'loggedIn',
+    },
+    {
       icon: 'exit_to_app',
       label: 'Kijelentkezés  ',
       displayFor: 'loggedIn',

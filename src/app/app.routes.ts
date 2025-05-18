@@ -5,6 +5,7 @@ import { FlightsComponent } from './components/flights/flights.component';
 import { authGuard } from './services/auth.guard';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
+import { ReservationsComponent } from './components/reservations/reservations.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -13,4 +14,9 @@ export const routes: Routes = [
   { path: 'flights', component: FlightsComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
+  {
+    path: 'reservations',
+    component: ReservationsComponent,
+    canActivate: [authGuard],
+  },
 ];

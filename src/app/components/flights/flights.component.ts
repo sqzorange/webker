@@ -24,7 +24,7 @@ import { FlightClassPipe } from '../../pipes/flight-class.pipe';
     FlightClassPipe,
   ],
   templateUrl: './flights.component.html',
-  styleUrls: ['./flights.component.scss'], // Győződj meg róla, hogy ez "styleUrls" tömb
+  styleUrls: ['./flights.component.scss'],
 })
 export class FlightsComponent implements OnInit {
   firestore: Firestore = inject(Firestore);
@@ -32,7 +32,6 @@ export class FlightsComponent implements OnInit {
   flightClasses: string[] = ['economy', 'first', 'business'];
 
   ngOnInit() {
-    // Alapértelmezetten, ha nincs keresési feltétel, az összes járatot lekérjük
     const flightsRef = collection(this.firestore, 'flights');
     this.filteredFlights$ = collectionData(flightsRef, { idField: 'id' });
   }
@@ -41,7 +40,6 @@ export class FlightsComponent implements OnInit {
     const flightsRef = collection(this.firestore, 'flights');
     const constraints = [];
 
-    // Felépítjük a Firestore lekérdezést csak a megadott feltételek alapján
     if (values.departure) {
       constraints.push(where('departure', '==', values.departure));
     }
@@ -59,7 +57,7 @@ export class FlightsComponent implements OnInit {
     if (constraints.length > 0) {
       flightsQuery = query(flightsRef, ...constraints);
     } else {
-      flightsQuery = flightsRef; // Ha nincs feltétel, az összes járatot kérjük le
+      flightsQuery = flightsRef;
     }
 
     this.filteredFlights$ = collectionData(flightsQuery, { idField: 'id' });
