@@ -21,6 +21,7 @@ import { MatNativeDateModule, MatOptionModule } from '@angular/material/core';
 import { MatSelectModule } from '@angular/material/select';
 import { MatButtonModule } from '@angular/material/button';
 import { getAuth } from 'firebase/auth';
+import { orderBy, query } from 'firebase/firestore';
 
 @Component({
   selector: 'app-booking',
@@ -68,7 +69,8 @@ export class BookingComponent implements OnInit {
 
   ngOnInit() {
     const flightsRef = collection(this.firestore, 'flights');
-    this.flights$ = collectionData(flightsRef, { idField: 'id' });
+    const queryRef = query(flightsRef, orderBy('departure'));
+    this.flights$ = collectionData(queryRef, { idField: 'id' });
   }
   async onSubmit(): Promise<void> {
     if (this.flightForm.invalid) {

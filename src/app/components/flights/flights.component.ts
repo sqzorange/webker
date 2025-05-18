@@ -12,6 +12,7 @@ import {
 import { Observable } from 'rxjs';
 import { FormatDatePipe } from '../../pipes/format-date.pipe';
 import { FlightClassPipe } from '../../pipes/flight-class.pipe';
+import { orderBy } from 'firebase/firestore';
 
 @Component({
   selector: 'app-flights',
@@ -33,7 +34,8 @@ export class FlightsComponent implements OnInit {
 
   ngOnInit() {
     const flightsRef = collection(this.firestore, 'flights');
-    this.filteredFlights$ = collectionData(flightsRef, { idField: 'id' });
+    const queryRef = query(flightsRef, orderBy('date'));
+    this.filteredFlights$ = collectionData(queryRef, { idField: 'id' });
   }
 
   updateSearch(values: any) {
