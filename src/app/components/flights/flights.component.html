@@ -11,6 +11,7 @@
             <th>Indulás</th>
             <th>Érkezés</th>
             <th>Dátum</th>
+            <th>Típus</th>
           </tr>
         </thead>
         <tbody>
@@ -18,7 +19,8 @@
           <tr>
             <td>{{ flight.departure }}</td>
             <td>{{ flight.arrival }}</td>
-            <td>{{ flight.date }}</td>
+            <td>{{ flight.date | formatDate }}</td>
+            <td>{{ flight.class | flightClass }}</td>
           </tr>
           }
         </tbody>

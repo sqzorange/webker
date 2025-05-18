@@ -10,11 +10,19 @@ import {
   where,
 } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
+import { FormatDatePipe } from '../../pipes/format-date.pipe';
+import { FlightClassPipe } from '../../pipes/flight-class.pipe';
 
 @Component({
   selector: 'app-flights',
   standalone: true,
-  imports: [NavbarComponent, CommonModule, SearchComponent],
+  imports: [
+    NavbarComponent,
+    CommonModule,
+    SearchComponent,
+    FormatDatePipe,
+    FlightClassPipe,
+  ],
   templateUrl: './flights.component.html',
   styleUrls: ['./flights.component.scss'], // Győződj meg róla, hogy ez "styleUrls" tömb
 })
