@@ -5,10 +5,8 @@
     <h2>Foglalásaim</h2>
 
     <div class="reservation-list">
-      <div
-        class="reservation-card"
-        *ngFor="let reservation of reservations$ | async"
-      >
+      @for (reservation of reservations$ | async; track $index) {
+      <div class="reservation-card">
         <div class="reservation-header">
           <h3>
             {{ reservation.passengerInfo.firstName }}
@@ -34,6 +32,7 @@
           {{ reservation.flightDetails.class | flightClass }}
         </p>
       </div>
+      }
     </div>
   </div>
 </div>
